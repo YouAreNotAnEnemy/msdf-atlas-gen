@@ -22,7 +22,7 @@ template <int N>
 bool saveImage(const msdfgen::BitmapConstRef<byte, N> &bitmap, ImageFormat format, const char *filename, YDirection outputYDirection) {
     switch (format) {
         case ImageFormat::PNG:
-            return msdfgen::savePng(bitmap, filename);
+            return false;
         case ImageFormat::BMP:
             return msdfgen::saveBmp(bitmap, filename);
         case ImageFormat::TIFF:
@@ -45,7 +45,7 @@ template <int N>
 bool saveImage(const msdfgen::BitmapConstRef<float, N> &bitmap, ImageFormat format, const char *filename, YDirection outputYDirection) {
     switch (format) {
         case ImageFormat::PNG:
-            return msdfgen::savePng(bitmap, filename);
+            return false;
         case ImageFormat::BMP:
             return msdfgen::saveBmp(bitmap, filename);
         case ImageFormat::TIFF:
